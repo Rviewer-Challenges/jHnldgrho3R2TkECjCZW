@@ -1,0 +1,14 @@
+Considerations:
+
+First consideration is how to handle conversions?
+
+
+Another thing is, if providing a web interface, how do we handle the conversion? To keep the logic
+centered, we use only the back-end and then the front-end must do an AJAX call to get value.
+Again, this is pretty overkill as the usual conversion would be straight; however, second though
+drives us to get again to the Cº/Fº conversion. So we need to compute a formula, and thus decide
+if duplicating logic or centralising it somewhere. The conclusion is to keep it in the backend, so all
+clients can access the service, and so will do the front-end.
+
+Also added db.sqlite3 to have a test/demo database with some units already loaded and an admin
+user created to make it easier to test. User 'admin', pass 'Test1234$'.
